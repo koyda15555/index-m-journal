@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 知识库入口</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f9fafb;
+            font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 3rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 720px;
+            width: 100%;
+        }
+        /* 标题层级 */
+        h1 {
+            font-weight: 600;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            color: #0b1120;
+        }
+        .subhead {
+            color: #475569;
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            border-left: 3px solid #2563eb;
+            padding-left: 0.9rem;
+        }
+        h2 {
+            font-weight: 600;
+            font-size: 1.35rem;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.4rem;
+            color: #1e293b;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #334155;
+        }
+        p {
+            margin-bottom: 0.9rem;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+            transition: border-color 0.15s, color 0.15s;
+        }
+        a:hover {
+            border-bottom-color: #2563eb;
+            color: #1d4ed8;
+        }
+        /* 目录感网格卡片 */
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.9rem;
+            margin: 1.5rem 0 1.2rem;
+        }
+        .index-card {
+            background: #ffffff;
+            border: 1px solid #e9edf2;
+            border-radius: 12px;
+            padding: 1.1rem 0.9rem;
+            transition: box-shadow 0.2s, border-color 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .index-card:hover {
+            border-color: #b9c9e0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+        }
+        .index-card .label {
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.2rem;
+            color: #0f172a;
+        }
+        .index-card .desc {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        /* 提示区 / 信息框 */
+        .notice-box {
+            background: #f1f5f9;
+            border-left: 4px solid #3b82f6;
+            border-radius: 0 10px 10px 0;
+            padding: 1.2rem 1.4rem;
+            margin: 1.8rem 0;
+        }
+        .notice-box strong {
+            color: #1e293b;
+            font-weight: 600;
+        }
+        .info-box {
+            background: #f8fafc;
+            border: 1px solid #dee5ed;
+            border-radius: 12px;
+            padding: 1.2rem 1.3rem;
+            margin: 1.5rem 0;
+        }
+        .info-box p {
+            margin-bottom: 0.5rem;
+        }
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        .faq-mini {
+            margin-top: 2rem;
+            list-style: none;
+        }
+        .faq-mini li {
+            padding: 0.65rem 0;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .faq-mini li:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #0f172a;
+        }
+        .faq-a {
+            color: #475569;
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+        }
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 1.8rem 0;
+        }
+        @media (max-width: 500px) {
+            body { padding: 2rem 1rem; }
+            h1 { font-size: 1.8rem; }
+            .index-grid { grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>世界杯·知识索引</h1>
+    <div class="subhead">资料整理 · 信息结构 · 关联入口</div>
+
+    <p>
+        关于<strong>世界杯</strong>的信息庞杂且分散。本页以知识库入口的方式，将赛事资料、历史记录、规则演变、统计数据等区分成若干主题板块，方便按需查阅。下方卡片目录可作为快速导航，也可在文案中找到指向 <a href="https://index-m-fifa.com">世界杯</a> 的具体链接（该站点为信息整理总索引）。
+    </p>
+
+    <h2>📋 目录卡片</h2>
+    <div class="index-grid">
+        <div class="index-card">
+            <span class="label">历届冠军</span>
+            <span class="desc">1930–2022 决赛结果、最佳球员、举办国</span>
+        </div>
+        <div class="index-card">
+            <span class="label">赛制演变</span>
+            <span class="desc">小组赛、淘汰赛、扩军时间线</span>
+        </div>
+        <div class="index-card">
+            <span class="label">纪录与数据</span>
+            <span class="desc">进球、出场、冠军数、冷门统计</span>
+        </div>
+        <div class="index-card">
+            <span class="label">规则·裁判</span>
+            <span class="desc">越位、VAR、红黄牌、换人调整</span>
+        </div>
+        <div class="index-card">
+            <span class="label">预选赛体系</span>
+            <span class="desc">各大洲名额、附加赛机制</span>
+        </div>
+        <div class="index-card">
+            <span class="label">东道主专题</span>
+            <span class="desc">申办流程、场馆、经济影响</span>
+        </div>
+    </div>
+
+    <h2>🔍 信息说明</h2>
+    <p>
+        本索引站将世界杯分为 <strong>历史档案</strong>、<strong>竞赛规则</strong>、<strong>数据统计</strong> 和 <strong>文化记录</strong> 四个大类。每个大类下再细分若干子目录，例如“历史档案”包含历届决赛详情、经典比赛回顾、球队更迭等；“数据统计”涵盖球员进球榜、球队胜率、观众人数等。所有条目均标注来源或参考链接，便于交叉验证。
+    </p>
+    <p>
+        如果你希望快速定位某届赛事或某支球队的记录，可直接使用站内搜索（位于 <a href="https://index-m-fifa.com">世界杯</a> 首页顶部）。信息面板会显示最常被查阅的条目，并持续根据资料整理进度更新。
+    </p>
+
+    <div class="notice-box">
+        <strong>ⓘ 提示：</strong> 建议优先查看「预选赛体系」与「赛制演变」两个板块，它们能帮助你理解当前世界杯名额分配和比赛阶段的基本逻辑。部分历史数据存在统计口径差异，我们在条目中已附加注释。
+    </div>
+
+    <h2>📌 相关信息区</h2>
+    <div class="info-box">
+        <p><strong>· 外部参考</strong> — FIFA 官方档案、RSSSF 统计数据库、各国足协历史记录。</p>
+        <p><strong>· 相关赛事</strong> — 女足世界杯、U-20 世界杯、沙滩足球世界杯、eWorld Cup。</p>
+        <p><strong>· 索引更新</strong> — 本页面随主站内容同步，每季度进行一次结构审查与补充。</p>
+    </div>
+
+    <h2>❓ 常见问题摘要</h2>
+    <ul class="faq-mini">
+        <li>
+            <div class="faq-q">为什么有些早期世界杯数据缺失？</div>
+            <div class="faq-a">1930 年及 1940 年代部分赛事记录不够完整，当时缺乏统一统计标准，我们尽可能综合多家来源进行比对。</div>
+        </li>
+        <li>
+            <div class="faq-q">是否包含未来世界杯申办信息？</div>
+            <div class="faq-a">包含。2030 年（乌拉圭/阿根廷/巴拉圭）与 2034 年（沙特阿拉伯）的申办进展、时间表及场馆计划已在“东道主专题”中整理。</div>
+        </li>
+        <li>
+            <div class="faq-q">数据表格可以下载吗？</div>
+            <div class="faq-a">目前以网页形式呈现，部分页面提供 CSV 导出功能，可在对应条目下方找到下载按钮。</div>
+        </li>
+    </ul>
+
+    <hr>
+    <p style="font-size:0.95rem;">
+        本索引由资料整理团队维护，所有信息均以公开来源为准。如需引用或转载，请注明出处。主站点 <a href="https://index-m-fifa.com">世界杯</a> 持续收录可靠数据，欢迎将其加入书签。
+    </p>
+    <div class="footer-note">
+        © 资料整理 · 世界杯知识入口
+    </div>
+</div>
+</body>
+</html>
